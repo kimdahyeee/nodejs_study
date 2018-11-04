@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>ejs example</title>
+    </head>
+    <body>
+        <h1><a href="/topic">board</a></h1>
+        <ul>
+            <% topics.forEach(function(topic){ %>
+            <li>
+                <a href = '/topic/<%= topic %>' ><%= topic %></a>
+            </li>
+            <% }) %>
+        </ul>
+
+        <article>
+            <h2><%= title %></h2>
+            <%= description %>
+        </article>
+
+        <div>
+            <a href="/topic/new">new</a>
+        </div>
+    </body>
+</html>
